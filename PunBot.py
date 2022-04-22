@@ -26,27 +26,32 @@ def checkPun(m,puns):
 def pickPun(plist,p):
     for puns in plist:
         if puns[0] == p:
-            return puns[random.randint(1,len(puns[0]))]
+            return puns[random.randint(1,len(puns[0]))] #pick a random pun
 
-plist, puns = getPuns("punlist.txt")
+plist, puns = getPuns("punlist.txt") #get list of puns and the pun key words
 
+#discord set up stuff:
 intents = discord.Intents.default()
 intents.message_content = True
 
 client = discord.Client(intents=intents)
 
+#When the bot joins
 @client.event
 async def on_ready():
-    print('Its fine now, why? For puns are here!')
+    await message.channel.send('Its fine now, why? For puns are here!')
 
+#When a message is sent
 @client.event
+#checks it doesn't reply to itself
 async def on_message(message):
     if message.author == client.user:
         return
-
+    #check the content for any pun key words
     pun = checkPun(message.content,'punlist.txt')
-    if pun != False and random.randint(0,3) == 3:
-        await message.channel.send(pickPun(pun))
+    #if there is a pun key word then there's chance to send a pun (so it's not too annoying)
+    if pun != False and random.randint(0,2) == 2:
+        await message.channel.send(pickPun(pun)) #pick a random pun and send it
 
 
 client.run('your token here')
