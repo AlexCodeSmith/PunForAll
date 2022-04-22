@@ -1,12 +1,2 @@
-cat
-dog
-pizza
-dessert
-hot
-cold
-cool
-robot
-icecream
-buns
-pirate
-police
+Pizza;Do we knead to know this?,I'll get in on a slice of that action!,You could call me a bit of a pizza afficionadough ;),Don't be a weirdough, I would make a pun but it's a bit cheesey
+Cat;That's pawesome!,Purrfect,Meowth! That's right,Are you furreal?,You gotta be kitten me,That's hiss-terical,a pun purr-haps? 
