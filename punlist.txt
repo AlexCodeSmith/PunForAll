@@ -1,0 +1,12 @@
+cat
+dog
+pizza
+dessert
+hot
+cold
+cool
+robot
+icecream
+buns
+pirate
+police
